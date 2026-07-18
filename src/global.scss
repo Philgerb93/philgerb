@@ -1,0 +1,62 @@
+@use 'sass:color';
+
+// ─── Design tokens ───────────────────────────────────────────────────────────
+$color-light:       #FAFBFA;
+$color-accent-light:#91BAD2;
+$color-brand:       #1A8276;
+$color-accent-dark: #98817B;
+$color-dark:        #292C35;
+
+$navbar-height: 48px;
+$header-height: 700px;
+
+// ─── Mixins ──────────────────────────────────────────────────────────────────
+@mixin clearfix {
+  &::after { clear: both; content: ''; display: table; }
+}
+
+@mixin absCenter {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: perspective(1px) translateX(-50%) translateY(-50%);
+}
+
+@mixin width-above($width) {
+  @media only screen and (min-width: $width) { @content; }
+}
+@mixin width-below($width) {
+  @media only screen and (max-width: $width) { @content; }
+}
+@mixin width-between($min,$max) {
+  @media only screen and (min-width: $min) and (max-width: $max) { @content; }
+}
+@mixin height-above($height) {
+  @media only screen and (min-height: $height) { @content; }
+}
+@mixin height-below($height) {
+  @media only screen and (max-height: $height) { @content; }
+}
+
+// ─── Keyframes ───────────────────────────────────────────────────────────────
+@keyframes appear {
+  from { opacity: 0; } to { opacity: 1; }
+}
+@keyframes videoAppear {
+  from { opacity: 0; } to { opacity: 0.4; }
+}
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0);    }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0);     }
+}
+@keyframes zoom {
+  from { transform: scale(0); } to { transform: scale(1); }
+}
