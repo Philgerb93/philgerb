@@ -47,7 +47,7 @@ const assets = [
     id: 1,
     title: 'Peaky Stamina',
     description:
-      'A fully data-driven terrain generation system powered by Burst-compiled noise layers. Infinite worlds, configurable biomes, and a non-destructive brush editor — all in one drag-and-drop package.',
+      'Peaky Stamina is a plug-and-play system designed to add customizable stamina, condition effects, and ready-to-use UI to your game in minutes.',
     tags: ['Tool', 'Built-in', 'URP'],
     image: peakyCover,
     storeUrl: 'https://u3d.as/44JY',
